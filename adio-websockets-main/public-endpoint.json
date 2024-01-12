@@ -1,0 +1,4 @@
+{
+    "containerName": "websockets",
+    "containerPort": 8765
+}

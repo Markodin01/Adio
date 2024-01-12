@@ -1,0 +1,33 @@
+<ng-template class="loginForm" #loginModal let-modal>
+  <div class="container-fluid">
+    <div class="modal-body">
+      <div class="row deezerRow">
+        <a
+          class="deezerLink"
+          target="_self"
+          [href]="this.deezerUrl"
+        >
+          <button mat-raised-button color="secondary" class="deezerButton">
+            Log in with
+            <img src="assets/deezerlogo/deezerlogoblack.svg" alt="Deezer" />
+          </button>
+        </a>
+      </div>
+      <div class="row or">
+        <div class="container-fluid">or</div>
+      </div>
+      <div class="row guestRow">
+        <a class="guestlink" target="_self" [routerLink]="'guest'">
+          <button
+            mat-raised-button
+            color="secondary"
+            class="guestButton"
+            (click)="modal.close('As guest')"
+          >
+            Log in as Guest
+          </button>
+        </a>
+      </div>
+    </div>
+  </div>
+</ng-template>

@@ -1,0 +1,2 @@
+websockets==10.4
+deezer-python==5.8.1

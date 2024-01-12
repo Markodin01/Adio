@@ -1,0 +1,78 @@
+.playlists {
+  max-width: 80vw;
+  height: 100vh;
+  overflow-y: hidden;
+  background-color: #000000;
+  padding: 5vh 0 5vh 0;
+}
+
+@media screen and (min-width: 600px) {
+  .playlists {
+    max-width: 50vw;
+  }
+}
+
+.grid-container {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-top: 1rem;
+  text-align: center;
+  justify-content: center;
+  gap: 0.5rem;
+  overflow: auto;
+}
+
+.grid-container::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.grid-item {
+  height: 9rem;
+  width: 8rem;
+  font-size: 1rem;
+  font-weight: 1000;
+  color: #f041b6;
+  justify-content: center;
+}
+
+.grid-item img:hover {
+transform: translateY(-10px);
+}
+
+.grid-item img {
+  border-radius: 20px;
+  width: 8rem;
+  height: 8rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.playlistLink {
+  text-decoration: none;
+  color: #f041b6;
+}
+
+.playlistTitle {
+  overflow-x: hidden;
+  overflow-y: visible;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-height: 2rem;
+  z-index: 9999;
+  position: relative;
+}
+
+.playlistTitle::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.grid-item:hover .playlistTitle {
+  overflow: visible;
+  white-space: normal;
+  box-shadow: 5px;
+  scale: 1.1;
+}

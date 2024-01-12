@@ -1,0 +1,14 @@
+<div class="playlists">
+  <div class="grid-container" *ngIf="playlistsLoaded" [@fadeInOut]>
+    <div class="grid-item" *ngFor="let playlist of playlists" (click)="setPlaylist(playlist.id, playlist.title)">
+      <a
+        class="playlistLink"
+        target="_blank"
+        (click)="closeDialog()"
+      >
+        <img src="{{ playlist.picture }}" alt="{{ playlist.title }}" />
+        <div class="playlistTitle">{{ playlist.title }}</div>
+      </a>
+    </div>
+  </div>
+</div>

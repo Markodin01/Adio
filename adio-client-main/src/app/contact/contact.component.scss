@@ -1,0 +1,88 @@
+.contact {
+    width: 80vw;
+    background: #000000;
+    color: #ec407a;
+    text-decoration: none;
+}
+
+.titleRow {
+    text-align: center;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    font-weight: bold;
+    padding: 2rem;
+}
+
+.infoRow {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: bold;
+}
+
+.questionContainer {
+    overflow-y: scroll;
+    max-height: 70vh;
+}
+
+.questionContainer::-webkit-scrollbar {
+    width: 0rem;
+}
+
+.questionRow {
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+.question,
+.answer {
+    color: #ec407a;
+    font-weight: bold;
+    text-align: left;
+}
+
+.question {
+    font-size: 1rem;
+    white-space: normal;
+}
+
+.answer {
+    font-size: 1rem;
+
+}
+
+.mat-expansion-panel {
+    background-color: #000000;
+    color: #ec407a;
+    border: 1px solid #ec407a;
+}
+
+.mat-expansion-panel-header-title {
+    line-height: 1.5rem;
+    background-color: #000000;
+}
+
+@media (hover: none) {
+    .mat-expansion-panel:not(.mat-expanded):not([aria-disabled='true'])
+      .mat-expansion-panel-header:hover {
+    background-color: #000000;
+    }
+  }
+
+.mat-expansion-panel-body {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 400;
+    text-align: left;
+}
+
+.closureRow {
+    text-align: center;
+    font-size: 3rem;
+    line-height: 3.5rem;
+    font-weight: bold;
+    padding: 2rem;
+}

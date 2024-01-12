@@ -1,0 +1,15 @@
+<nav class="navbar">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col links">
+        <a *ngIf="checkUserInfoPresent() == true" mat-icon-button [routerLink]="'../home/profile'"><mat-icon> person</mat-icon></a>
+      </div>
+      <div class="col text-center">
+        <a [routerLink]="'../home/play-create'"><span class="adio">adio</span></a>
+      </div>
+      <div class="col links justify-content-end">
+          <a mat-icon-button [routerLink]="''" (click)="logout()"><mat-icon>exit_to_app</mat-icon></a> <!-- TODO: add logout functionality - erase user data etc.-->
+      </div>
+    </div>
+  </div>
+  </nav>

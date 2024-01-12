@@ -1,0 +1,47 @@
+.playCreate {
+  z-index: 9999;
+}
+
+.row {
+  height: 100%;
+  width: 100%;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  text-align: center;
+}
+
+.col {
+  height: 100%;
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+
+}
+
+.createCol {
+  margin: 20vh 0 5rem 0;
+}
+
+.createButton,
+.playButton {
+  font-weight: bold;
+  font-size: 2rem;
+  height: 4rem;
+  width: 17rem;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+.createButton:hover,
+.playButton:hover {
+  // animation: color-change ease-in-out 1s infinite alternate;
+}
+
+@keyframes color-change {
+  from {
+    color: #ec407a
+  }
+
+  to {
+    color: #f041b6
+  }
+}

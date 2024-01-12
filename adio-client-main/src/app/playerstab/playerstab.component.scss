@@ -1,0 +1,39 @@
+.playersTab {
+  padding: 5vw;
+  color: #f041b6;
+  height: 100%;
+  // overflow: clip;
+}
+
+.scoresText {
+  height: 5rem;
+  font-size: 4rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.scoresTable {
+  display: grid;
+  justify-content: space-between;
+}
+
+.playerRow {
+  font-size: 2rem;
+  display: flex;
+  height: 3rem;
+}
+
+.playerNameCol {
+}
+
+.playerName {
+}
+
+.playerScoreCol {
+  width: 5rem;
+}
+
+.playerScore {
+  text-align: start;
+}

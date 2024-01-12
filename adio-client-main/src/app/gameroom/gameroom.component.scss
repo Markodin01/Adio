@@ -1,0 +1,156 @@
+.gameroom {
+  background-color: #000000;
+  height: 100%;
+  width: 100%;
+  color: #f041b6;
+  font-weight: bold;
+  overflow: clip;
+}
+
+.disable-selection {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none;
+  -ms-user-select: none; /* Internet Explorer (>=10) / Edge */
+  user-select: none; /* Currently supported by: */
+  /* Chrome, Opera and Firefox */
+}
+
+.navbar {
+  padding: 1% 1% 0 1%;
+  margin: 0 0 0 0;
+}
+
+.playersTab {
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.playersButton:hover {
+  animation: color-change ease-in-out 1s infinite alternate;
+}
+
+.fullscreenButton:hover {
+  animation: color-change ease-in-out 1s infinite alternate;
+}
+
+.rightNav {
+  text-align: right;
+}
+
+.deezerRow {
+  margin: 0px;
+  padding: 1.5vh 0 1.5vh 0;
+  height: 4rem;
+}
+
+.questionRow {
+  height: 5rem;
+}
+
+.ansRow {
+  margin: 0px;
+  padding: 0 1% 0 1%;
+}
+
+.scoreRow {
+  margin: 0px;
+  padding: 3vh 1% 3vh 1%;
+  font-size: 2rem;
+}
+
+.scoreTextRow, .scoreNumRow {
+}
+
+.scoreText, .scoreNum {
+  padding: 0px 5px 0px 5px;
+  margin: 0px;
+  height: 2.5rem;
+}
+
+.timerColLeft, .timerColRight {
+  font-size: 4rem;
+  // padding: 8vh 0 0 0;
+}
+
+.timerColLeft {
+  text-align: end;
+  padding-right: 5%;
+}
+
+.timerColRight {
+  text-align: start;
+  padding-left: 5%;
+}
+
+.questionCol {
+  text-align: center;
+  height: 5rem;
+}
+
+.chosenButton {
+  // animation: background-color-change ease-in-out 1s infinite alternate;
+}
+
+.ansCol {
+  text-align: center;
+  margin: 0px;
+  padding: 5px 5px 5px 5px;
+  height: 25vh;
+  max-width: 50%;
+}
+
+.ansButton {
+  width: 100%;
+  height: 100%;
+}
+
+.ansButton:hover {
+  // animation: background-color-change ease-in-out 1s infinite alternate;
+}
+
+.questionText {
+  font-size: 2rem;
+  line-height: 2.5rem;
+  color: #f041b6;
+}
+
+.ansText {
+  font-size: 1rem;
+}
+
+.roomName {
+  text-align: center;
+  font-size: 3rem;
+  height: 3rem;
+  z-index: 9999;
+}
+
+.roomNameText:hover {
+  animation: color-change ease-in-out 1s infinite alternate;
+  cursor: pointer;
+}
+
+.deezer {
+  height: 15vh;
+  padding-top: 3vh;
+}
+
+@keyframes background-color-change {
+  from {background-color: #ec407a}
+  to {background-color: #f041b6}
+}
+
+@keyframes color-change {
+  from {color: #ec407a}
+  to {color: #f041b6}
+}
+
+.iosAudioClick {
+  width: 0;
+  height: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}

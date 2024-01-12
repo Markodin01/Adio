@@ -1,0 +1,32 @@
+.gameType {
+  background: none;
+  background-color: #000000;
+  max-width: 80vw;
+  max-height: 80vh;
+  overflow: hidden;
+}
+
+.col {
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  text-align: center;
+}
+
+.row {
+  height: 100%;
+  margin: 0 0 0 0;
+  padding: 1rem 0 1rem 0;
+}
+
+button {
+  background-color: #000000;
+  border-radius: 25px;
+  border-width: 2px;
+  border-color: #ec407a;
+  color: #ec407a;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2rem;
+  min-width: 17rem;
+  height: 4rem;
+}

@@ -1,0 +1,16 @@
+<body>
+  <div class="animationContainer">
+    <div class="topDotsContainer" [class.mobile]="isMobile">
+      <span class="dotTop" [class.mobile]="isMobile" *ngFor="let dot of dotsTop"></span>
+    </div>
+    <div class="botDotsContainer" [class.mobile]="isMobile">
+      <span class="dotBot" [class.mobile]="isMobile" *ngFor="let dot of dotsBot"></span>
+    </div>
+  </div>
+  <div class="app-navbar">
+    <app-navbar></app-navbar>
+  </div>
+  <div class="app-main-frame">
+    <app-main-frame></app-main-frame>
+  </div>
+</body>

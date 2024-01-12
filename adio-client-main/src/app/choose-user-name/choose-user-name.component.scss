@@ -1,0 +1,40 @@
+.mat-mdc-dialog-container .mdc-dialog__surface {
+    border-radius: 25px;
+}
+
+.chooseUserName {
+    background-color: #ec407a;
+    // width: 19rem;
+    // height: 18rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 9999;
+}
+
+.enterUsername {
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 1.5rem 0 1rem 0;
+    height: 100%;
+    width: 75%;
+    line-height: 2.5rem;
+}
+
+.inputForm {
+    width: 75%;
+
+}
+
+.submitButton {
+    margin: 1rem 0 2rem 0;
+    min-width: 13rem;
+    // height: 2.5rem;
+    line-height: 3rem;
+    font-weight: 1000;
+    font-size: 2rem;
+    border-radius: 25px;
+}

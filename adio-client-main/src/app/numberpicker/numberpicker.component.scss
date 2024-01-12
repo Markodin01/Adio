@@ -1,0 +1,38 @@
+.numberPicker {
+    background: none;
+    background-color: #000000;
+    min-width: 81vw;
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.numberPicker::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+.col {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    text-align: center;
+}
+
+.row {
+    height: 100%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+.button {
+    // background-color: #000000;
+    // border: 1px solid #f041b6;
+    // border-top: 1px solid #f041b6;
+    border-radius: 0px;
+    border-bottom: 1px solid #ec407a;
+    color: #ec407a;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    min-width: 100%;
+    height: 4rem;
+}

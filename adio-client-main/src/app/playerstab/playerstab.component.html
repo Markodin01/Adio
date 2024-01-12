@@ -1,0 +1,15 @@
+<div class="playersTab">
+  <div class="scoresText">
+    scores
+  </div>
+  <div class="scoresTable">
+  <div class="playerRow" *ngFor="let player_score of players_scores | keyvalue">
+    <div class="playerScoreCol">
+      <div class="playerScore">{{ player_score.value }}</div>
+    </div>
+    <div class="playerNameCol">
+      <div class="playerName">{{ player_score.key }}</div>
+    </div>
+  </div>
+</div>
+</div>

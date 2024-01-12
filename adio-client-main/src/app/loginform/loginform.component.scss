@@ -1,0 +1,43 @@
+.custom-modal-class .modal-content {
+  border-radius: 25px;
+}
+
+.loginForm {
+  background-color: #000000;
+}
+
+.modal-backdrop {
+  background-color: #000000;
+}
+
+.modal-content {
+  background-color: #ec407a;
+}
+
+.deezerLink, .guestlink, .or {
+  text-decoration: none;
+  color:#000000;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.deezerButton, .guestButton {
+  border-radius: 25px;
+  background-color: #ec407a;
+  color: #000000;
+  width: 100%;
+}
+
+.deezerRow, .guestRow, .or {
+  margin: 5% 0 5% 0;
+  text-align: center;
+  justify-content: center;
+}
+
+a:focus {
+  outline: none;
+}
+
+a:hover {
+  color: #000000;
+}

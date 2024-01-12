@@ -1,0 +1,61 @@
+<div class="createGame" [@fadeInOut]>
+  <div class="row">
+    <div class="col">
+      <input
+        type="text"
+        class="roomName"
+        maxlength="12"
+        placeholder="room name"
+        [(ngModel)]="game_room_name"
+      />
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button class="gameType" (click)="openGameType()">
+        {{ game_room_type ? game_room_type : "game type" }}
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button class="totalRounds" (click)="openTotalRounds()">
+        {{ game_room_total_rounds ? game_room_total_rounds : "nº of rounds" }}
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button class="totalRounds" (click)="openRoundDuration()">
+        {{ game_room_round_duration ? game_room_round_duration : "round duration" }}
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button class="visibility" (click)="setVisibility()">
+        {{ game_room_visibility }}
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button class="playlists" (click)="openPlaylists()">
+        {{ game_room_playlist_title ? game_room_playlist_title : "playlist" }}
+      </button>
+    </div>
+  </div>
+  <div class="row buttonRow">
+    <div class="col">
+      <a
+        class="createButton"
+        mat-raised-button
+        style="text-decoration: none; background-color: #ec407a;"
+        [disabled]="!game_room_name || !game_room_type || !game_room_playlist_id || !game_room_total_rounds"
+        (click)="createGame()"
+        >
+        create game
+      </a>
+    </div>
+  </div>
+</div>

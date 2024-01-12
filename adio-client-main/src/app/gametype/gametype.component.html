@@ -1,0 +1,7 @@
+<div class="gameType">
+  <div class="row" *ngFor="let gameType of gameTypes">
+    <div class="col">
+      <button (click)="setGameType(gameType)">{{gameType}}</button>
+    </div>
+  </div>
+</div>

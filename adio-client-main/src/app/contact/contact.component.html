@@ -1,0 +1,23 @@
+<div class="contact">
+  <div class="titleRow">{{ data.title }}
+  </div>
+  <div class="infoRow">{{ data.info }}</div>
+  <div class="questionContainer">
+    <div class="questionRow" *ngFor="let question of data.questions; let i = index">
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title class="question">
+            {{ question }}
+          </mat-panel-title>
+          <!-- <mat-panel-description> -->
+            <!-- Might add quick responses here -->
+          <!-- </mat-panel-description> -->
+        </mat-expansion-panel-header>
+        <ng-template class="answer" matExpansionPanelContent>
+          {{ data.answers[i] }}
+        </ng-template>
+      </mat-expansion-panel>
+    </div>
+  </div>
+  <div class="closureRow">{{ data.closure }}</div>
+</div>

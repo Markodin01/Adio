@@ -1,0 +1,8 @@
+<div class="numberPicker" #numberPicker>
+    <div class="row" *ngFor="let number of numbers">
+      <div class="col">
+        <button class="button" mat-button (click)="setNumber(number)">{{number}}</button>
+      </div>
+    </div>
+  </div>
+  

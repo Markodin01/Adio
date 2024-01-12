@@ -1,0 +1,136 @@
+<mat-sidenav-container class="gameroom disable-selection" [@fadeInOut]>
+  <mat-sidenav class="playersTab" #sidenav mode="over" opened="false">
+    <app-playerstab [players_scores]="players_scores" (click)="sidenav.close()"></app-playerstab>
+  </mat-sidenav>
+  <div class="gameroom">
+    <div class="navbar">
+      <div class="col leftNav">
+        <button
+          class="playersButton"
+          #playersButton
+          mat-icon-button
+          (click)="sidenav.toggle()"
+        >
+          <mat-icon>people</mat-icon>
+        </button>
+      </div>
+      <div class="col rightNav">
+        <button
+          class="fullscreenButton"
+          mat-icon-button
+          (click)="toggleFullscreen()"
+        >
+          <ng-container *ngIf="isFullScreen; else notFullScreen">
+            <mat-icon>fullscreen_exit</mat-icon>
+          </ng-container>
+          <ng-template #notFullScreen>
+            <mat-icon>fullscreen</mat-icon>
+          </ng-template>
+        </button>
+        <button class="leaveButton" mat-icon-button (click)="leaveRoom()">
+          <mat-icon>meeting_room</mat-icon>
+        </button>
+      </div>
+    </div>
+    <div class="row roomName">
+      <div class="col">
+        <span class="roomNameText" (click)="copyGameRoomId(this.gameRoomSettings.game_room_id)" title="Click here to copy Game Code">{{ this.gameRoomSettings.game_room_name }}</span>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+    <div class="row deezerRow">
+      <div class="col timerColLeft">
+        {{ countDownMins.toString().padStart(2, "0") }}
+      </div>
+      <div class="col">
+        <div #trackPlayer class="trackPlayer"></div>
+      </div>
+      <div class="col timerColRight">
+        {{ countDownSecs.toString().padStart(2, "0") }}
+  <!-- WHEN WANNA SWITCH TO ONLY SECONDS{{ countDownSecs.toString().padStart(2, "0").charAt(1) }} -->
+      </div>
+    </div>
+    <div class="row questionRow">
+      <div class="col questionCol">
+        <div class="questionText">{{ currentQuestion }}</div>
+      </div>
+    </div>
+    <div class="row ansRow">
+      <div class="col ansCol">
+        <button
+          class="ansButton ans0"
+          [style.backgroundColor]="
+            currentAnswer === currentAnswers[0] ? 'green' : '#f06292'
+          "
+          [style.opacity]="
+            currentAnswer === currentAnswers[0] ? '1' : ''
+          "
+          #ans0
+          mat-raised-button
+          (click)="chooseAnswer(currentAnswers[0], ans0)"
+        >
+          <div class="ansText">{{ currentAnswers[0] }}</div>
+        </button>
+      </div>
+      <div class="col ansCol">
+        <button
+          class="ansButton ans1"
+          [style.backgroundColor]="
+            currentAnswer === currentAnswers[1] ? 'green' : '#ec407a'
+          "
+          [style.opacity]="
+            currentAnswer === currentAnswers[1] ? '1' : ''
+          "
+          #ans1
+          mat-raised-button
+          (click)="chooseAnswer(currentAnswers[1], ans1)"
+        >
+          <div class="ansText">{{ currentAnswers[1] }}</div>
+        </button>
+      </div>
+    </div>
+    <div class="row ansRow">
+      <div class="col ansCol">
+        <button
+          class="ansButton ans2"
+          [style.backgroundColor]="
+            currentAnswer === currentAnswers[2] ? 'green' : '#e91e63'
+          "
+          [style.opacity]="
+            currentAnswer === currentAnswers[2] ? '1' : ''
+          "
+          #ans2
+          mat-raised-button
+          (click)="chooseAnswer(currentAnswers[2], ans2)"
+        >
+          <div class="ansText">{{ currentAnswers[2] }}</div>
+        </button>
+      </div>
+      <div class="col ansCol">
+        <button
+          class="ansButton ans3"
+          [style.backgroundColor]="
+            currentAnswer === currentAnswers[3] ? 'green' : '#f50057'
+          "
+          [style.opacity]="
+            currentAnswer === currentAnswers[3] ? '1' : ''
+          "
+          #ans3
+          mat-raised-button
+          (click)="chooseAnswer(currentAnswers[3], ans3)"
+        >
+          <div class="ansText">{{ currentAnswers[3] }}</div>
+        </button>
+      </div>
+    </div>
+    <div class="row scoreRow">
+      <div class="row scoreTextRow">
+        <div class="scoreText">Score: {{ score }}</div>
+        <!-- <div class="scoreNum"></div> -->
+      </div>
+      <!-- <div class="row scoreNumRow">
+      </div> -->
+    </div>
+  <button class="iosAudioClick" style="visibility: hidden;" #iosAudioClick (click)="audio.play()"></button>
+  </div>
+</mat-sidenav-container>

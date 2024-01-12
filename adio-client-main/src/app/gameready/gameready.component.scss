@@ -1,0 +1,131 @@
+* {
+}
+
+.gameready {
+  height: 100%;
+  margin: 0;
+  background-color: #000000ef;
+  overflow-x: hidden;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+.waitingRow {
+  font-size: 2rem;
+  font-weight: 1000;
+  line-height: 2rem;
+  justify-content: center;
+  text-align: center;
+  padding: 5% 5% 0 5%;
+  color: #f041b6;
+}
+
+.waitingRow .twoDots:before {
+  content: '.';
+  display: inline-block;
+  animation: blink 1s ease-in-out infinite;
+}
+
+.waitingRow .twoDots:after {
+  content: '.';
+  display: inline-block;
+  animation: blink 1s ease-in-out infinite;
+  animation-delay: 0.2s;
+}
+
+.waitingRow .oneDot:before {
+  content: '.';
+  display: inline-block;
+  animation: blink 1s ease-in-out infinite;
+  animation-delay: 0.4s;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.players {
+  display: flex;
+  // flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: center;
+  height: 40%;
+  padding: 3rem 0 3rem 0;
+  color: #f041b6;
+}
+
+.player {
+  font-size: 1.5rem;
+  font-weight: 1000;
+  flex: 1 0 33%;
+}
+
+.buttonRow {
+  position: absolute;
+  bottom: 10%;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.startButton {
+  width: 8rem;
+  height: 3rem;
+  font-size: 2rem;
+  font-weight: 1000;
+  color: #000000;
+  border-radius: 20px;
+}
+
+.gameCodeRow {
+  margin: 5% 5% 0 5%;
+  height: 4rem;
+}
+
+.gameCodeCol {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  text-align: center;
+  justify-content: center;
+}
+
+.gameCode {
+  max-width: 16rem;
+  height: 100%;
+  line-height: 2.5rem;
+  font-size: 2.5rem;
+  font-weight: 1000;
+  color: #000000;
+  border-radius: 20px;
+}
+
+.gameCode:hover {
+  animation: color-change ease-in-out 1s infinite alternate;
+  cursor: pointer;
+}

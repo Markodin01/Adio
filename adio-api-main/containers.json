@@ -1,0 +1,8 @@
+{
+    "flask": {
+        "image": ":adio-api-aws.flask-container.2",
+        "ports": {
+            "8080": "HTTP"
+        }
+    }
+}

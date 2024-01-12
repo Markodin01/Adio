@@ -1,0 +1,45 @@
+<div class="profile" [@fadeInOut]>
+  <div class="pictureRow">
+    <div class="profilePictureContainer">
+      <a class="link" href="{{ user.link }}" target="_blank"
+        ><img
+          class="profilePicture"
+          src="{{ user.picture }}"
+          alt="{{ user.username }}"
+          title="go to deezer profile"
+      /></a>
+    </div>
+  </div>
+  <div class="userNameRow">
+    <div class="userNameContainer">
+      <span class="userName">{{ user.username }}</span>
+    </div>
+  </div>
+  <!-- <div class="buttonRow">
+    <button
+    mat-raised-button
+    color="secondary"
+    style="background-color: #ec407a; color: #000000"
+    class="userNameButton"
+  >
+    edit
+  </button>
+  </div> -->
+  <div class="playlistsRow">
+    <!-- <div class="editMessageContainer">
+      <span class="editMessage">your deezer playlists:</span>
+    </div> -->
+    <div class="grid-container" *ngIf="playlistsLoaded" [@fadeInOut]>
+      <div class="grid-item" *ngFor="let playlist of playlists">
+        <a
+          class="playlistLink"
+          target="_blank"
+          href="https://www.deezer.com/en/playlist/{{ playlist.id }}"
+        >
+          <img src="{{ playlist.picture }}" alt="{{ playlist.title }}" title="go to playlist" />
+          <div class="playlistTitle">{{ playlist.title }}</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

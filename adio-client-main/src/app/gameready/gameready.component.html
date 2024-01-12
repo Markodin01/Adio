@@ -1,0 +1,34 @@
+<div class="gameready">
+  <div class="row gameCodeRow">
+    <div class="col gameCodeCol">
+      <button
+        mat-raised-button
+        color="warn"
+        class="gameCode"
+        (click)="copyGameRoomId(this.gameRoomId)"
+        title="Click here to copy Game Code"
+      >
+      {{ gameRoomId }}
+    </button>
+    </div>
+  </div>
+  <div class="waitingRow"><span class="twoDots"></span><span class="oneDot"></span></div>
+  <div class="players">
+    <div class="player" *ngFor="let player of players">
+      <div class="playerName">{{ player }}</div>
+      <div class="playerStatus"></div>
+    </div>
+  </div>
+  <div class="row buttonRow" *ngIf="isOwner">
+    <div class="col">
+      <button
+        class="startButton"
+        mat-raised-button
+        color="warn"
+        [mat-dialog-close]="true"
+      >
+        Start
+      </button>
+    </div>
+  </div>
+</div>

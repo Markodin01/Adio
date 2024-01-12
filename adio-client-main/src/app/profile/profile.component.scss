@@ -1,0 +1,111 @@
+.profile {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: bold;
+    color: #f041b6;
+    padding-top: 1rem;
+    display: grid;
+    overflow: hidden;
+    z-index: 9999;
+    position:relative;
+}
+
+.profilePicture {
+    border-radius: 25px;
+    width: 12rem;
+    height: 12rem;
+    transition: transform 0.2s ease-in-out;
+}
+
+.profilePicture:hover {
+    transform: scale(1.03);
+    }
+    .cursor {
+    content: "go to deezer profile";
+    }
+
+.userNameContainer {
+    padding-top: 0rem;
+}
+
+.userName {
+    font-size: 2rem;
+}
+
+.playlistsRow {
+    padding-top: 1rem;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 1.5rem;
+    text-align: center;
+    justify-content: center;
+    gap: 0.5rem;
+    overflow: auto;
+    border-radius: 50px;
+    border-top: 1px solid #f041b6;
+    height: 50vh;
+  }
+  
+  .grid-container::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  
+  .grid-item {
+    height: 9rem;
+    width: 8rem;
+    font-size: 1rem;
+    font-weight: 1000;
+    color: #f041b6;
+    justify-content: center;
+  }
+  
+  .grid-item img:hover {
+  transform: translateY(-10px);
+  }
+  
+  .grid-item img {
+    border-radius: 20px;
+    width: 8rem;
+    height: 8rem;
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .playlistLink {
+    text-decoration: none;
+    color: #f041b6;
+  }
+  
+  .playlistTitle {
+    overflow-x: hidden;
+    overflow-y: visible;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    height: 100%;
+  }
+  
+  .playlistTitle::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+  
+  .grid-item:hover .playlistTitle {
+    // overflow: visible;
+    white-space: normal;
+  }
+
+.userNameButton {
+    font-size: 2rem;
+    height: 4rem;
+    width: 17rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+
+}

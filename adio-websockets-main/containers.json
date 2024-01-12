@@ -1,0 +1,8 @@
+{
+    "websockets": {
+        "image": ":adio-websockets.websockets.17",
+        "ports": {
+            "8765": "HTTP"
+        }
+    }
+}

@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+html { font-size: calc(15px + 0.390625vw); }
+html, body { height: 100%; overflow: hidden;}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+// ::selection {
+//     color: none;
+//     background: none;
+// }
+// /* For Mozilla Firefox */
+// ::-moz-selection {
+//     color: none;
+//     background: none;
+// }

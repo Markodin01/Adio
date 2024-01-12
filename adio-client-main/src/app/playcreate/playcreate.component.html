@@ -1,0 +1,31 @@
+<div class="playCreate" [@fadeInOut]>
+  <div class="row">
+    <div class="col createCol">
+      <button
+        mat-raised-button
+        color="secondary"
+        style="background-color: #ec407a"
+        class="createButton"
+        #createButton
+        [routerLink]="'/home/create-game'"
+      >
+        create
+      </button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col playCol">
+      <button
+        mat-raised-button
+        color="secondary"
+        style="background-color: #ec407a"
+        class="playButton"
+        #playButton
+        [routerLink]="'/home/play-game'"
+      >
+        join
+      </button>
+    </div>
+  </div>
+  <app-info></app-info>
+</div>

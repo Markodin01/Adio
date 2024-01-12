@@ -1,0 +1,35 @@
+<div class="playgame" [@fadeInOut]>
+  <div class="row formRow">
+    <div class="column container pincontainer">
+      <div class="enterPin">enter PIN</div>
+      <div class="requiredinputform" style="color: #000000">
+        <form [formGroup]="joinForm" (ngSubmit)="joinGame()">
+          <div class="flex">
+            <mat-form-field class="inputForm" appearance="outline">
+              <mat-label>enter PIN</mat-label>
+              <input
+                matInput
+                formControlName="game_room_id"
+                maxlength="8"
+                placeholder="Ex: 6JP2GMD9"
+                onkeyup="this.value = this.value.toUpperCase()"
+              />
+              <mat-hint align="end"
+                >{{ joinForm.value.game_room_id?.length || 0 }}/8</mat-hint
+              >
+            </mat-form-field>
+            <button
+              class="submitButton"
+              mat-raised-button
+              type="submit"
+              color="secondary"
+              [disabled]="joinForm.invalid"
+            >
+              join game
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
